@@ -1,12 +1,19 @@
 import React from "react";
-import { Link } from "react-router";
+
+import Article from "../components/Article";
 
 export default class Featured extends React.Component{
 	render() {
+		const Articles = [
+			"Some Article",
+			"Some Other Article",
+			"Yet  Another Article ",
+			"Still More",
+		].map((title, i) =>  <Article key={i}  title={title} /> );
+
 		return (
 			<div>
-			<h1> Features </h1>
-			<p>hello  this  is  Features</p>
+				<div class="row">{Articles}</div>
 			</div>
 			);
 	}
